@@ -1,0 +1,156 @@
+/* Define styles for minimize and close buttons */
+.button-minimize, .button-close {
+    -fx-background-color: transparent; /* Or match the container's background */
+    -fx-background-radius: 0; /* Optional: removes the rounded corners if you want a flat design */
+    -fx-background-insets: 0; /* Optional: removes the default insets */
+}
+
+/* Change the background color of the minimize button when hovered */
+.button-minimize:hover {
+    -fx-background-color: rgb(136, 136, 136);
+}
+
+/* Change the background color of the close button when hovered */
+.button-close:hover {
+    -fx-background-color: rgb(224, 71, 71);
+}
+
+.button-System, .button-Profile, .button-Settings, .button-Log ,.button-login , .button_send{
+    -fx-background-color: rgb(95, 93, 93);
+    -fx-background-radius: 15; /* Increased to ensure smoothness */
+    -fx-background-insets: 0; /* Align the insets with the border */
+
+    -fx-border-color: rgb(130, 215, 255); /* Example border color */
+    -fx-border-width: 3; /* Example border width */
+    -fx-border-radius: 15; /* Should match -fx-background-radius */
+    -fx-border-insets: 0; /* Align the insets with the border */
+
+    -fx-padding: 5 10 5 10; /* Top, right, bottom, left padding - adjust as needed */
+    -fx-text-fill: white; /* Text color for the button */
+}
+
+.label-log1_a, .label-log2_a, .label-log3_a, .label-log4_a, .label-log5_a, .label-log6_a, .label-log7_a, .label-log8_a , .user_id {
+
+    -fx-background-color: rgb(235, 231, 183);
+    -fx-background-radius: 15; /* Increased to ensure smoothness */
+    -fx-background-insets: 0; /* Align the insets with the border */
+
+    -fx-border-color: rgb(130,215,255);
+    -fx-border-width: 3;
+    -fx-border-radius: 15; /* Should match -fx-background-radius */
+    -fx-border-insets: 0; /* Align the insets with the border */
+
+    -fx-padding: 5 10 5 10; /* Top, right, bottom, left padding - adjust as needed */
+    -fx-text-fill: rgb(0, 0, 0); /* Text color for the button */
+}
+
+.label-log1_db , .label-log2_db , .label-log3_db, .label-log4_db, .label-log4_db, .label-log5_db, .label-log6_db, .label-log7_db, .label-log8_db {
+    -fx-background-color: rgb(235, 231, 183);
+    -fx-background-radius: 15; /* Increased to ensure smoothness */
+    -fx-background-insets: 0; /* Align the insets with the border */
+
+    -fx-border-color: rgb(98, 168, 226);
+    -fx-border-width: 3;
+    -fx-border-radius: 15; /* Should match -fx-background-radius */
+    -fx-border-insets: 0; /* Align the insets with the border */
+
+    -fx-padding: 5 10 5 10; /* Top, right, bottom, left padding - adjust as needed */
+    -fx-text-fill: rgb(0, 0, 0); /* Text color for the button */
+}
+.label-Irr_label, .label-temp_label, .label-light_label, .label-hum_label{
+
+    -fx-background-color:  rgb(0,0,0);
+    -fx-background-radius: 20;
+    -fx-background-insets: 0;
+
+    -fx-border-color: rgb(98, 168, 226);
+    -fx-border-width: 3;
+    -fx-border-radius: 15; /* Should match -fx-background-radius */
+    -fx-border-insets: 0; /* Align the insets with the border */
+    -fx-text-fill: white;
+}
+
+.label-settings {
+    -fx-background-color: rgb(235, 231, 183);
+    -fx-background-radius: 15; /* Increased to ensure smoothness */
+    -fx-background-insets: 0; /* Align the insets with the border */
+
+    -fx-border-color: rgb(98, 168, 226);
+    -fx-border-width: 3;
+    -fx-border-radius: 15; /* Should match -fx-background-radius */
+    -fx-border-insets: 0; /* Align the insets with the border */
+
+    -fx-padding: 5 10 5 10; /* Top, right, bottom, left padding - adjust as needed */
+    -fx-text-fill: rgb(0, 0, 0); /* Text color for the button */
+}
+
+.choicebox-settings {
+    -fx-border-color: rgb(98, 168, 226);
+    -fx-border-width: 3;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15; 
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-padding: 3 6 3 6; /* You might need to adjust the padding */
+}
+
+
+.button-apply {
+    -fx-background-color: rgb(95, 93, 93);
+    -fx-background-radius: 15; /* Increased to ensure smoothness */
+    -fx-background-insets: 0; /* Align the insets with the border */
+
+    -fx-border-color: rgb(130, 215, 255); /* Example border color */
+    -fx-border-width: 3; /* Example border width */
+    -fx-border-radius: 15; /* Should match -fx-background-radius */
+    -fx-border-insets: 0; /* Align the insets with the border */
+
+    -fx-padding: 5 10 5 10; /* Top, right, bottom, left padding - adjust as needed */
+    -fx-text-fill: white; /* Text color for the button */
+}
+
+/* Define styles for other buttons if needed, or they will use the default JavaFX styles */
+/* If you want to reset any specific styles you can define them here */
+
+
+/* Dont touch this its for custom popup */
+
+.popup-layout {
+    -fx-background-color: rgb(0, 0, 0);
+    -fx-padding: 10;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+}
+
+.popup-message {
+    -fx-font-size: 24pt;
+    -fx-text-fill: rgb(255, 255, 255)
+}
+
+.vbox_sliding {
+    -fx-background-color: rgb(0, 90, 143);
+    -fx-background-radius: 15;
+    -fx-border-color: black;
+    -fx-border-width: 3;
+    -fx-border-radius: 15;
+}
+
+.vbox_sliding_textfields{
+    -fx-background-color: transparent; 
+    -fx-border-color: #1E1E1E; 
+    -fx-border-width: 0px 0px 2px 0px;
+}
+
+.change_buttons{
+    -fx-background-color: rgb(119, 118, 118);
+    -fx-background-radius: 15; /* Increased to ensure smoothness */
+    -fx-background-insets: 0; /* Align the insets with the border */
+
+    -fx-border-color: rgb(130, 215, 255); /* Example border color */
+    -fx-border-width: 3; /* Example border width */
+    -fx-border-radius: 15; /* Should match -fx-background-radius */
+    -fx-border-insets: 0; /* Align the insets with the border */
+
+    -fx-padding: 5 10 5 10; /* Top, right, bottom, left padding - adjust as needed */
+    -fx-text-fill: white; /* Text color for the button */
+}

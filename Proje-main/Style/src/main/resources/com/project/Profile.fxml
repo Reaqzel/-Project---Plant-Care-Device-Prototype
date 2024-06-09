@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ProfileController">
+   <children>
+      <BorderPane prefHeight="800.0" prefWidth="1200.0">
+         <left>
+            <VBox alignment="CENTER" prefHeight="800.0" prefWidth="200.0" spacing="50.0" style="-fx-background-color: #282828; -fx-border-color: #1A1A1A; -fx-border-image-insets: 1 0 0 0;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="System" alignment="CENTER" mnemonicParsing="false" onAction="#switchToSystem" prefHeight="50.0" prefWidth="150.0" styleClass="button-System" text="System" textAlignment="CENTER" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#switchToLog" prefHeight="50.0" prefWidth="150.0" styleClass="button-Log" text="Log" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#switchToProfile" prefHeight="50.0" prefWidth="150.0" styleClass="button-Profile" text="Profile" textFill="WHITE" />
+                  <Button fx:id="Settings" mnemonicParsing="false" onAction="#switchToSettings" prefHeight="50.0" prefWidth="150.0" styleClass="button-Settings" text="Settings" textFill="WHITE" />
+               </children>
+            </VBox>
+         </left>
+         <right>
+            <Pane fx:id="rightPane" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #1E1E1E; -fx-border-color: #1A1A1A; -fx-border-insets: 1 0 0 0;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="TOP_CENTER" layoutX="45.0" layoutY="48.0" prefHeight="249.0" prefWidth="293.0" spacing="10.0">
+                     <children>
+                        <ImageView fx:id="user_image" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icons/ID copy.png" />
+                           </image></ImageView>
+                        <Label fx:id="User_id" alignment="CENTER" contentDisplay="CENTER" prefHeight="53.0" prefWidth="241.0" styleClass="user_id" text="UserID" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </VBox>
+                  <VBox fx:id="vbox_changeFields" alignment="CENTER" layoutX="-868.0" layoutY="400.0" prefHeight="320.0" prefWidth="668.0" spacing="40.0" styleClass="vbox_sliding">
+                     <children>
+                        <TextField fx:id="old_field" maxWidth="250.0" promptText="Current USER ID" styleClass="vbox_sliding_textfields">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="new_field" maxWidth="250.0" promptText="New USER ID" styleClass="vbox_sliding_textfields" />
+                        <TextField fx:id="newR_field" maxWidth="250.0" promptText="Repeat NEW USER ID" styleClass="vbox_sliding_textfields" />
+                        <Button fx:id="send" mnemonicParsing="false" onAction="#applyToDatabaseID" styleClass="button_send" text="Apply" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="80.0" />
+                     </padding>
+                  </VBox>
+                  <HBox alignment="TOP_RIGHT" layoutX="868.0" prefHeight="45.0" prefWidth="100.0" spacing="20.0">
+                     <children>
+                        <Button fx:id="Minimaze" mnemonicParsing="false" onAction="#minimizeWindow" styleClass="button-minimize" textAlignment="CENTER">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icons/minus.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="CloseAll" mnemonicParsing="false" onAction="#closeWindow" styleClass="button-close">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icons/close.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER" layoutX="400.0" layoutY="97.0" prefHeight="200.0" prefWidth="221.0" spacing="10.0">
+                     <children>
+                        <Label prefHeight="53.0" prefWidth="131.0" text="Change" textFill="WHITE">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="57.0" prefWidth="126.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="ID_change" mnemonicParsing="false" onAction="#giveVboxID" styleClass="change_buttons">
+                                 <graphic>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Icons/ID.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="password_change" mnemonicParsing="false" onAction="#giveVboxPassword" styleClass="change_buttons">
+                                 <graphic>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Icons/key.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets top="50.0" />
+                     </padding>
+                  </VBox>
+                  <VBox fx:id="vBox_changeFields2" alignment="CENTER" layoutX="-868.0" layoutY="400.0" prefHeight="320.0" prefWidth="668.0" spacing="40.0" styleClass="vbox_sliding">
+                     <children>
+                        <TextField fx:id="old_field2" maxWidth="250.0" promptText="Current PASSWORD" styleClass="vbox_sliding_textfields">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="new_field2" maxWidth="250.0" promptText="New PASSWORD" styleClass="vbox_sliding_textfields" />
+                        <TextField fx:id="newR_field2" maxWidth="250.0" promptText="Repeat NEW PASSWORD" styleClass="vbox_sliding_textfields" />
+                        <Button fx:id="send1" mnemonicParsing="false" onAction="#applyToDatabasePassword" styleClass="button_send" text="Apply" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="80.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </Pane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

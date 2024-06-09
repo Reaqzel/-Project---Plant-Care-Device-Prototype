@@ -1,0 +1,9 @@
+com\project\LoginController.class
+com\project\Settings.class
+com\project\SharedData.class
+module-info.class
+com\project\App.class
+com\project\LogController.class
+com\project\SystemController.class
+com\project\ProfileController.class
+com\project\SettingsController.class
